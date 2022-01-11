@@ -32,13 +32,20 @@ console.log("the first letter is: ", bootcamp.charAt(4)); // d
 
 let str = "this is our test string";
 
-let substring1 = str.substring(5, 10);
-console.log(substring1); // is ou
+let substring1 = str.substring(5, 10); // we count from 0
+console.log(substring1); // is ou ==> the last is not included, meaning the "end" is not inclusive
 let substring2 = str.substring(5, 11);
 console.log(substring2); // is our
 
-let substring3 = str.substring(-10, 5);
+let substring3 = str.substring(-10, 5); // negative number is zero for substring(), so this is the same as (0, 5)
 console.log("substring3: ", substring3); // this
+
+let useSubstring2 = str.substring(5); // from this position all the way till the end of the string if we don't pass the end value
+console.log(`What if we pass only start to substring: ${useSubstring2}`); // What if we pass only start to substring: is our test
+
+
+// --------------------------------------------------------
+
 
 let substr1 = str.substr(5, 11);
 
@@ -48,7 +55,7 @@ let slicedString1 = str.slice(5, 10);
 console.log("sliced string: ", slicedString1); // is ou
 
 let slicedString2 = str.slice(-5);
-console.log(slicedString2);
+console.log(slicedString2); // tring
 
 // **************************************************
 // - substring's parameters are reversible, as it will always use its smallest
